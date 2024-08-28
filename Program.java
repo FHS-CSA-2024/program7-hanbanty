@@ -25,7 +25,9 @@ public class Main {
 
 
     public double convertMoney(int schruteBucks, int stanleyNickels, int klevins){
-        double total = schruteBucks + (double) klevins /20 + (double) stanleyNickels /240;
+        final double SCHRUTEKLEVINS = (double) klevins /20;
+        final double SCHRUTENICKELS = (double) stanleyNickels /240;
+        double total = schruteBucks + SCHRUTEKLEVINS + SCHRUTENICKELS;
         total = (double) Math.round(total * 100) /100;
 
         return total;
